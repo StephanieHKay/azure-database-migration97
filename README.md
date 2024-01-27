@@ -56,10 +56,27 @@ TODO(#dev-environment-setup-and-data-loss-simulation)
 
 
 ## Database Migration to Azure SQL Database
+- Used Data Studio, SQL Server schema compare & Azure SQL Migration to migrate the on-premises database to Azure.
 
-- Azure Server and Database Creation:
-  - Created an Azure SQL Server.
-  - Provisioned an SQL Database.
+- Set-up: 
+  - Created a new SQL Database Server using SQL authentication.
+  - Created a SQL database and configured firewall rules to ensure secure VM access to the SQL database.
+
+- Azure Data Studio:
+  - Established local SQL Server connection
+  - Ensured Azure Data Studio connection to both local and Azure SQL Servers
+
+- Schema migration:
+  - Used SQL Server Schema Compare extension in Azure Data Studio to compare and align schemas between the Local SQL Server (source) and Azure SQL Database (target).
+
+- Data migration:
+  - Used Azure SQL Migration extension in Azure Data Studio to initiate, configure, and facilitate the migration process.
+  - Set up an Azure Database Migration Service for managing the migration process.
+  - Installed and configured Integration Runtime to allow connection to the Azure Database Migration Service.
+  - Following migration, validated the integrity and completeness of the data in Azure SQL Database.
+
+
+
 
 
 
