@@ -59,6 +59,9 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
 
 - Azure Data Studio:
   - Established Azure Data Studio connection to both local and Azure SQL Servers.
+  <div align="center">
+  <img src="azure data studio.png" alt="Azure Data Studio">
+</div>
   
 - Schema migration:
   - Used SQL Server Schema Compare extension in Azure Data Studio to compare and align schemas between the Local SQL Server (source) and Azure SQL Database (target).
@@ -83,6 +86,9 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
   - Restored the database back-up into the new Development Environment.
   - Utilised SSMS to establish a Management Task and automated regular back-ups of the development database. This ensured consistent protection of the database and simplified recovery of the database if required. 
   - Tested the newly established maintenance plan by executing.
+<div align="center">
+  <img src="SSMS.png" alt="SSMS">
+</div>
 
 ## Disaster Recovery Simulation
 - Intentionally caused data loss in the production environment to ensure functioning recovery procedures.
@@ -92,3 +98,12 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
 - Used Azure SQL Database Backup to restore the production database to a restoration point just before the simulated data loss. Validated the restoration success by examining the data through the connection in Azure Data Studio.
 
 ## Geo-replication and Failover configuration 
+- Configured geo-replication by establishing a synchronized copy of the production database in a secondary region. Conducted to enhance data protection, ensure continuous data availability and minimize potential downtime during unforeseen disruptions.  Performed failover testing to ensure the availability and consistency of the secondary database.
+
+- Set up geo-replication of the production database. The created replica of the primary database resided on a separate SQL server located in a different geographical region from the primary database server.
+
+- Orchestrated a planned failover to the secondary region followed by a failover back to the primary region.
+
+<div align="center">
+  <img src="failover.png" alt="Failover">
+</div>
