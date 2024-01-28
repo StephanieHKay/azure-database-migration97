@@ -30,18 +30,10 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
 1. [Setting up the Production Environment](#Setting-up-the-Production-Environment)
 2. [Database Migration to Azure SQL Database](#Database-Migration-to-Azure-SQL-Database)
 3. [Data Backup and Development Environment](#Data-Backup-and-Development-Environment)
-4. []
+4. [Disaster Recovery Simulation](#Disaster-Recovery-Simulation)
+5. [Geo-replication and Failover configuration ](#Geo-replication-and-Failover-configuration )
 
-Data Loss Simulation] 
-TODO(#dev-environment-setup-and-data-loss-simulation)
-   - [Set Up a Dev Environment] 
-   TODO(#set-up-a-dev-environment)
-   - [Automated Backup of the Dev DB] 
-   TODO(#automated-backup-of-the-dev-db)
-   - [Data Loss Simulation in the Azure Prod Environment & Disaster Recovery] 
-   TODO(#data-loss-simulation-in-the-azure-prod-environment--disaster-recovery)
-3. [Geo-replication and Failover](#geo-replication-and-failover) TODO
-4. [Microsoft Entra ID for Azure SQL DB](#microsoft-entra-id-for-azure-sql-db) TODO
+
 
 ## Setting up the Production Environment 
 
@@ -92,3 +84,11 @@ TODO(#dev-environment-setup-and-data-loss-simulation)
   - Utilised SSMS to establish a Management Task and automated regular back-ups of the development database. This ensured consistent protection of the database and simplified recovery of the database if required. 
   - Tested the newly established maintenance plan by executing.
 
+## Disaster Recovery Simulation
+- Intentionally caused data loss in the production environment to ensure functioning recovery procedures.
+
+- Deliberately removed, using SQL statements, critical data fom the production database to replicate a scenario of compromised data integrity using the already established connection in Azure Data Studio.
+
+- Used Azure SQL Database Backup to restore the production database to a restoration point just before the simulated data loss. Validated the restoration success by examining the data through the connection in Azure Data Studio.
+
+## Geo-replication and Failover configuration 
