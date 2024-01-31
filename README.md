@@ -32,6 +32,7 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
 3. [Data Backup and Development Environment](#Data-Backup-and-Development-Environment)
 4. [Disaster Recovery Simulation](#Disaster-Recovery-Simulation)
 5. [Geo-replication and Failover configuration ](#Geo-replication-and-Failover-configuration )
+6. [Security & Access Control](#Security-&-Access-Control)
 
 
 
@@ -107,3 +108,11 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
 <div align="center">
   <img src="failover.png" alt="Failover">
 </div>
+
+## Security & Access Control
+
+- Integrated Microsoft Entra ID authentication for the SQL Server (hosting the production database) to strengthen database security.
+
+- Set up and assigned a Microsoft Entra admin role. 
+
+- Created a new user account with database read-only privileges by assigning this user the db_datareader role
