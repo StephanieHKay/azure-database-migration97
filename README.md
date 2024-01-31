@@ -1,7 +1,7 @@
 # Azure Database Migration Project
 
 ## Introduction
-In this project, I implemented a cloud-based database system on Microsoft Azure, transitioning an on-premise database to the Azure SQL Database. K
+In this project, I implemented a cloud-based database system on Microsoft Azure, transitioning an on-premise database to the Azure SQL Database.
 
 - **Established a production environment:** Set up a SQL server database on an Azure VM.
 - **Database Migration:** Migrated the database to Azure SQL Database, ensuring data backup and automated scheduling.
@@ -14,7 +14,7 @@ In this project, I implemented a cloud-based database system on Microsoft Azure,
 A visual representation of the setup, migration, disaster recovery, geo-replication, failover, and security configurations.
 
 <div align="center">
-  <img src="architecture.PNG" alt="Architecture">
+  <img src="architecture.png" alt="Architecture">
 </div>
 
 ### Technologies Used:
@@ -32,7 +32,7 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
 3. [Data Backup and Development Environment](#Data-Backup-and-Development-Environment)
 4. [Disaster Recovery Simulation](#Disaster-Recovery-Simulation)
 5. [Geo-replication and Failover configuration ](#Geo-replication-and-Failover-configuration )
-6. [Security & Access Control](#Security-&-Access-Control)
+6. [Security and Access Control](#Security-and-Access-Control)
 
 
 
@@ -109,10 +109,10 @@ A visual representation of the setup, migration, disaster recovery, geo-replicat
   <img src="failover.png" alt="Failover">
 </div>
 
-## Security & Access Control
+## Security and Access Control
 
 - Integrated Microsoft Entra ID authentication for the SQL Server (hosting the production database) to strengthen database security.
 
 - Set up and assigned a Microsoft Entra admin role. 
 
-- Created a new user account with database read-only privileges by assigning this user the db_datareader role
+- Created a new user account with database read-only privileges by assigning this user the db_datareader role.
